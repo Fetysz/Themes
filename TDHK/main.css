@@ -632,9 +632,6 @@
 	background-image: var(--transparency-7);
 }
 
-.chat-3bRxxu .container-1r6BKw {
-	background-image: var(--transparency-10);
-}
 
 /* Guild and Top bar transparency */
 .theme-dark .wrapper-1Rf91z {
@@ -671,11 +668,6 @@
 /* removing color from specific class */
 .panels-j1Uci_ {
 	background-color: transparent;
-}
-/* extra for transparency 3 special case */
-.themeDark-3Ap_7i, .da-app .chat-3bRxxu {
-	background-color: transparent;
-	background-image: var(--transparency-3);
 }
 
 .typeWindows-1za-n7 {
@@ -738,3 +730,18 @@
 .theme-light .tooltipBlack-PPG47z .tooltipPointer-3ZfirK {
     border-top-color: var(--secondary3-colour);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
