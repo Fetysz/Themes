@@ -1,4 +1,33 @@
 
+
+.theme-light {
+	
+    --primary1-colour: rgba(45,45,45,0.5);
+    --primary2-colour: rgba(255,0,255,1);
+    --primary3-colour: rgba(10,10,10,0.3);
+	--primary4-colour: transparent;
+
+    --secondary1-colour: rgba(0,0,0,0.25);
+    --secondary2-colour: rgba(0,0,0,0.15);
+    --secondary3-colour: rgba(0,0,0,0.6);
+	--secondary4-colour: rgba(15, 15, 15, 0.3)
+
+    --transparency-1: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.0));
+    --transparency-2: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.35));
+    --transparency-3: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    --transparency-4: radial-gradient(circle, rgba(0,0,0,0.9), rgba(0,0,0,0.5));
+    --transparency-5: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+	--transparency-6: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.6));
+	--transparency-7: linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.2));
+	--transparency-8: linear-gradient(to left, rgba(0,0,0,0.55), rgba(0,0,0,0.2));
+	--transparency-9: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	--transparency-10: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.25) 85%, rgba(0,0,0,0.65) 100%);
+	
+	--link-color: rgba(7, 163, 217, 0.9);
+	--mention-color: rgba(220, 220, 220, 1);
+	--activetext-colour: white;
+}
+
 /*--------------------------------------------------------*/
 
 /*Theme Itself*/
