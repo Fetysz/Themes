@@ -1,3 +1,4 @@
+
 .theme-light {
 	
     --primary1-colour: rgba(45,45,45,0.5);
@@ -630,6 +631,9 @@
 	background-image: var(--transparency-7);
 }
 
+.chat-3bRxxu .container-1r6BKw {
+	background-image: var(--transparency-10);
+}
 
 /* Guild and Top bar transparency */
 .theme-dark .wrapper-1Rf91z {
