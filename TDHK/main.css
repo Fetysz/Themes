@@ -9,7 +9,7 @@
     --secondary1-colour: rgba(0,0,0,0.25);
     --secondary2-colour: rgba(0,0,0,0.15);
     --secondary3-colour: rgba(0,0,0,0.6);
-	--secondary4-colour: rgba(15, 15, 15, 0.3)
+	--secondary4-colour: rgba(15, 15, 15, 0.3);
 
     --transparency-1: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.0));
     --transparency-2: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.35));
@@ -21,12 +21,14 @@
 	--transparency-8: linear-gradient(to left, rgba(0,0,0,0.55), rgba(0,0,0,0.2));
 	--transparency-9: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
 	--transparency-10: linear-gradient(to right, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 85%, rgba(0,0,0,0.55) 100%);
+	--transparency-11: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.35) 15%, rgba(0,0,0,0.15) 85%, rgba(0,0,0,0.55) 100%);
 	
 	--link-color: rgba(7, 163, 217, 0.9);
 	--mention-color: rgba(220, 220, 220, 1);
 	--activetext-colour: white;
 	--hover-popup: 
 }
+
 
 
 .theme-light {
@@ -39,7 +41,7 @@
     --secondary1-colour: rgba(0,0,0,0.25);
     --secondary2-colour: rgba(0,0,0,0.15);
     --secondary3-colour: rgba(0,0,0,0.6);
-	--secondary4-colour: rgba(15, 15, 15, 0.3)
+	--secondary4-colour: rgba(15, 15, 15, 0.3);
 
     --transparency-1: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.0));
     --transparency-2: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.35));
@@ -182,7 +184,7 @@
 
 				/*VC Info*/
 				#app-mount .panels-j1Uci_ {background-color: transparent;}
-				#app-mount .container-1giJp5 {background-color: var(--secondary3-colour);}
+				#app-mount .container-1giJp5 {background-image: var(--transparency-2);}
 				#app-mount .button-14-BFJ[aria-label="Disconnect"] {background-color: var(--primary3-colour);}
 				#app-mount .button-14-BFJ[aria-label="Disconnect"]:hover {background-color: var(--primary3-colour);}
 
@@ -242,8 +244,7 @@
 
 		#app-mount .messageGroupBlocked-3wrQQX {background-color: var(--secondary1-colour);}
 		#app-mount .messageGroupBlockedBtn-1PBBh- {color: var(--primary1-colour);}
-
-		#app-mount a.anchor-3Z-8Bb {color: var(--primary1-colour);}
+		.noticeDanger-7u-yT9 .button-1MICoQ:hover {background-color: transparent; color: white;}
 		#app-mount .unreadMentionsBar-1VrBNe {background-color: var(--primary1-colour);}
 		#app-mount .channelTextArea-rNsIhG .scrollableContainer-2NUZem {background-color: var(--secondary1-colour);}
 
@@ -589,8 +590,7 @@
 		#app-mount .bd-modal-inner button {background-color: var(--primary1-colour)}
 
 	/*TopBar*/
-	#app-mount .typeWindows-1za-n7, 
-	#app-mount .notice-2FJMB4 {
+	#app-mount .typeWindows-1za-n7 {
 		background-color: var(--secondary3-colour); 
 		border-bottom: 2px solid var(--primary3-colour); 
 		height: 25px
@@ -603,6 +603,12 @@
 		position: absolute;
 		top: 8px;
 		left: 43.2%;
+	}
+	#app-mount .notice-2FJMB4 {
+		background-color: transparent;
+		background-image: var(--transparency-11);
+		height: 36px;
+		border-radius: 0;
 	}
 
 	#app-mount .wordmark-2iDDfm {top: 3.3px;}
@@ -701,6 +707,11 @@
 .panels-j1Uci_ {
 	background-color: transparent;
 }
+/* extra for transparency 3 special case */
+.themeDark-3Ap_7i, .da-app .chat-3bRxxu {
+	background-color: transparent;
+	background-image: var(--transparency-3);
+}
 
 .typeWindows-1za-n7 {
 	background-image: var(--transparency-5);
@@ -762,3 +773,27 @@
 .theme-light .tooltipBlack-PPG47z .tooltipPointer-3ZfirK {
     border-top-color: var(--secondary3-colour);
 }
+
+.blockquoteDivider-2hH8H6 {
+	background-color: var(--primary3-colour);
+	border-radius: 4px;
+}
+
+.blockquoteContainer-U5TVEi {
+	background-color: var(--primary3-colour);
+	border-radius: 4px;
+	width: 1450px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
