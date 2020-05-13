@@ -705,10 +705,6 @@
 }
 
 /* transparency for channels and members list and private channels and left side of settings*/
-.da-app .container-3baos1 {
-	background: transparent;
-	background-image: var(--transparency-2);
-}
 .sidebarRegion-VFTUkN {background-image:var(--transparency-2)}
 
 /* chat and top area and other secondary pages */
