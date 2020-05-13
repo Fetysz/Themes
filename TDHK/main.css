@@ -1,3 +1,8 @@
+:root {
+	
+    --background: url('https://fetysz.is-inside.me/uT2g6qRE.jpg');
+}
+	
 .theme-dark {
 	
     --primary1-colour: rgba(45,45,45,0.5);
@@ -25,10 +30,12 @@
 	--link-color: rgba(7, 163, 217, 0.9);
 	--mention-color: rgba(220, 220, 220, 1);
 	--activetext-colour: white;
-	--hover-popup: 
+	--hover-popup: none;
+	
+	--spoiler-covered: rgba(0,0,0,0.4);
+	--spoiler-hovered: rgba(12,12,12,0.4);
+	--spoiler-uncovered: rgba(45,45,45,0.4);
 }
-
-
 
 .theme-light {
 	
@@ -144,8 +151,8 @@
 			border-radius: 10px; 
 			padding: 5px 5px 10px 0;
 		}
-		#app-mount .container-3baos1,
-		#app-mount .activityPanel-28dQGo {
+		
+		#app-mount .activityPanel-28dQGo, .sidebar-2K8pFh{
 			background-image: var(--transparency-2); 
 			background-color: rgba(0,0,0,0); 
 			margin-bottom: 0;
@@ -280,14 +287,16 @@
 	#app-mount .scrollerWrap-2lJEkd ::-webkit-scrollbar-track-piece,
 	#app-mount .messagesWrapper-3lZDfY ::-webkit-scrollbar-track-piece, 
 	#app-mount .friendsTable-133bsv ::-webkit-scrollbar-track-piece, 
-	#app-mount .gameLibrary-TTDw4Y ::-webkit-scrollbar-track-piece {
+	#app-mount .gameLibrary-TTDw4Y ::-webkit-scrollbar-track-piece, 
+	#app-mount .pageWrapper-1PgVDX ::-webkit-scrollbar-track-piece {
 		background-color: transparent; 
 		border-color: transparent;
 	}
 	
 	#app-mount .messagesWrapper-3lZDfY ::-webkit-scrollbar-track, 
 	#app-mount .friendsTable-133bsv ::-webkit-scrollbar-track, 
-	#app-mount .gameLibrary-TTDw4Y ::-webkit-scrollbar-track {
+	#app-mount .gameLibrary-TTDw4Y ::-webkit-scrollbar-track,
+	#app-mount .pageWrapper-1PgVDX ::-webkit-scrollbar-track {
 		background-color: transparent; 
 		border: none;
 		border-color: var(--primary3-colour);
@@ -601,7 +610,7 @@
 
 		position: absolute;
 		top: 8px;
-		left: 43.2%;
+		left: 43.3%;
 	}
 	#app-mount .notice-2FJMB4 {
 		background-color: transparent;
@@ -627,22 +636,41 @@
 	#app-mount .leftSplit-1qOwnR {width: 80%;}
 	
 	/* Spoilers */
-	.wrapper-2a6GCs .spoilerText-3p6IlD.hidden-HHr2R9{background-color: rgba(0,0,0,0.4);}
-	.wrapper-2a6GCs .spoilerText-3p6IlD.hidden-HHr2R9:hover{background-color: rgba(12,12,12,0.4);}
-	.wrapper-2a6GCs .spoilerText-3p6IlD{background-color: rgba(75,75,75,0.4);}
+	.wrapper-2a6GCs .spoilerText-3p6IlD.hidden-HHr2R9{background-color: var(--spoiler-covered);}
+	.wrapper-2a6GCs .spoilerText-3p6IlD.hidden-HHr2R9:hover{background-color: var(--spoiler-hovered);}
+	.wrapper-2a6GCs .spoilerText-3p6IlD{background-color: var(--spoiler-uncovered);}
 	
 	.backdropWithLayer-3_uhz4, .backdrop-1wrmKB {opacity: 0.4!important;}
 	
+	/* Other */
 	
 	.scrollerWrap-2lJEkd .scrollWrap-qwpLpa {background-image: var(--transparency-3)}
 	
 	.platform-win .sidebar-2K8pFh { border-radius: 0;}
+
 	
 	
 	.theme-dark .sidebar-1-SQro {background:none;}
 	.theme-dark .container-1If-HZ, .theme-dark .reactors-Blmlhw {background-color: transparent;}
 	
+	/* Quotes */
+	.blockquoteDivider-2hH8H6 {
+	background-color: var(--primary3-colour);
+	border-radius: 4px;
+	}
 	
+	.blockquoteContainer-U5TVEi {
+		background-color: var(--spoiler-uncovered);
+		border-radius: 4px;
+		margin-right: 1rem;
+	}
+	
+	/* Discover menu */
+	.theme-dark .pageWrapper-1PgVDX {background-color: transparent; background-image: var(--transparency-7);}
+	.theme-dark .card-3DjzTQ:hover {background-color: var(--primary3-colour);}
+	.theme-dark .card-3DjzTQ {background-color: var(--primary1-colour);}
+	.theme-dark .iconMask-3b8GzQ {background-color: transparent;}
+
 	
 	
 	
@@ -677,14 +705,12 @@
 }
 
 /* transparency for channels and members list and private channels and left side of settings*/
-.container-PNkimc, .privateChannels-1nO12o, .da-app .container-3baos1 {
+.da-app .container-3baos1 {
 	background: transparent;
 	background-image: var(--transparency-2);
 }
 .sidebarRegion-VFTUkN {background-image:var(--transparency-2)}
-.theme-dark .container-3baos1, .theme-light .container-3baos1 {
-	background-image: var(--transparency-3);
-}
+
 /* chat and top area and other secondary pages */
 .da-app .activityFeed-28jde9, .activityFeed-1C0EmJ, .da-app .gameLibrary-TTDw4Y, .da-app .applicationStore-1pNvnv, .da-app #friends, .da-app .noChannel-Z1DQK7, .da-app .container-3gCOGc {
 	background: transparent;
@@ -768,18 +794,10 @@
     border-top-color: var(--secondary3-colour);
 }
 
-.blockquoteDivider-2hH8H6 {
-	background-color: var(--primary3-colour);
-	border-radius: 4px;
+
+.theme-dark .quickSelectPopout-X1hvgV {
+	background-color: rgba(0, 0, 0, 0.4);
 }
-
-.blockquoteContainer-U5TVEi {
-	background-color: var(--primary3-colour);
-	border-radius: 4px;
-	width: 1450px;
-}
-
-
 
 
 
