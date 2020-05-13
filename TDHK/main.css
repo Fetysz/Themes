@@ -1,8 +1,4 @@
-:root {
-	
-    --background: url('https://fetysz.is-inside.me/uT2g6qRE.jpg');
-}
-	
+
 .theme-dark {
 	
     --primary1-colour: rgba(45,45,45,0.5);
@@ -35,6 +31,7 @@
 	--spoiler-covered: rgba(0,0,0,0.4);
 	--spoiler-hovered: rgba(12,12,12,0.4);
 	--spoiler-uncovered: rgba(45,45,45,0.4);
+	--guildsError-color: rgba(10,10,10,0.15);
 }
 
 .theme-light {
@@ -63,6 +60,12 @@
 	--link-color: rgba(7, 163, 217, 0.9);
 	--mention-color: rgba(220, 220, 220, 1);
 	--activetext-colour: white;
+	--hover-popup: none;
+	
+	--spoiler-covered: rgba(0,0,0,0.4);
+	--spoiler-hovered: rgba(12,12,12,0.4);
+	--spoiler-uncovered: rgba(45,45,45,0.4);
+	--guildsError-color: rgba(10,10,10,0.15);
 }
 
 /*--------------------------------------------------------*/
@@ -251,7 +254,7 @@
 		#app-mount .messageGroupBlocked-3wrQQX {background-color: var(--secondary1-colour);}
 		#app-mount .messageGroupBlockedBtn-1PBBh- {color: var(--primary1-colour);}
 		.noticeDanger-7u-yT9 .button-1MICoQ:hover {background-color: transparent; color: white;}
-		#app-mount .unreadMentionsBar-1VrBNe {background-color: var(--primary1-colour);}
+		#app-mount .unreadMentionsBar-1VrBNe {background-color: var(--secondary3-colour);}
 		#app-mount .channelTextArea-rNsIhG .scrollableContainer-2NUZem {background-color: var(--secondary1-colour);}
 
 		#app-mount .newMessagesBar-mujexs {background-color: var(--primary1-colour);} 
@@ -795,10 +798,22 @@
 	background-color: rgba(0, 0, 0, 0.4);
 }
 
+.theme-dark .tooltipRed-8-9NeP {
+	background-color: var(--secondary3-colour);
+}
 
+.theme-dark .tooltipRed-8-9NeP .tooltipPointer-3ZfirK {
+	border-top-color: var(--secondary3-colour);
+}
 
+.guildsError-b7zR5H {
+	border-color: var(--guildsError-color);
+}
 
-
+.guildsError-b7zR5H:hover {
+	border-color: var(--guildsError-color);
+	background-color: var(--guildsError-color);
+}1
 
 
 
