@@ -1,4 +1,3 @@
-
 .theme-dark {
 	
     --primary1-colour: rgba(45,45,45,0.5);
@@ -24,7 +23,8 @@
 	--transparency-11: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.35) 15%, rgba(0,0,0,0.15) 85%, rgba(0,0,0,0.55) 100%);
 	
 	--link-color: rgba(7, 163, 217, 0.9);
-	--mention-color: rgba(220, 220, 220, 1);
+	--mentiontext-color: rgba(220, 220, 220, 1);
+	--mentionbg-color: rgba(25, 25, 25, 0.4);
 	--activetext-colour: white;
 	--hover-popup: none;
 	
@@ -32,6 +32,7 @@
 	--spoiler-hovered: rgba(12,12,12,0.4);
 	--spoiler-uncovered: rgba(45,45,45,0.4);
 	--guildsError-color: rgba(10,10,10,0.15);
+	--context-color: rgba(0, 0, 0, 0.4);
 }
 
 .theme-light {
@@ -58,7 +59,8 @@
 	--transparency-10: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.25) 85%, rgba(0,0,0,0.65) 100%);
 	
 	--link-color: rgba(7, 163, 217, 0.9);
-	--mention-color: rgba(220, 220, 220, 1);
+	--mentiontext-color: rgba(220, 220, 220, 1);
+	--mentionbg-color: rgba(30, 30, 30, 0.25);
 	--activetext-colour: white;
 	--hover-popup: none;
 	
@@ -155,14 +157,20 @@
 			padding: 5px 5px 10px 0;
 		}
 		
-		#app-mount .activityPanel-28dQGo, .sidebar-2K8pFh{
+		.sidebar-2K8pFh{
 			background-image: var(--transparency-2); 
 			background-color: rgba(0,0,0,0); 
 			margin-bottom: 0;
 		}
+		
+		#app-mount .activityPanel-28dQGo {
+			background-image: none;
+			background-color: transparent;
+			margin-bottom: 0;
+		}
 
 		#app-mount .containerDefault-3GGEv_ {margin-top: 10px;}
-		#app-mount .unreadBar-3YD_k9 {background-color: var(--primary1-colour);}
+		#app-mount .unreadBar-3YD_k9 {background-color: var(--secondary3-colour);}
 
 
 			/*Text*/
@@ -196,6 +204,9 @@
 				#app-mount .container-1giJp5 {background-image: transparent;}
 				#app-mount .button-14-BFJ[aria-label="Disconnect"] {background-color: var(--primary3-colour);}
 				#app-mount .button-14-BFJ[aria-label="Disconnect"]:hover {background-color: var(--primary3-colour);}
+				.users-i_3-kL {background-color: var(--primary1-colour);}
+				.total-3tKGEB {background-color: var(--primary3-colour);}
+				.total-3tKGEB::after {border-right-color: var(--primary3-colour);}
 
 				/*VC User*/
 				#app-mount .list-2bwCXU { padding-left: 10px; }
@@ -232,8 +243,8 @@
 
 		#app-mount .wrapperHover-1GktnT, 
 		#app-mount .mention {
-			background-color: rgba(75,75,75,0.4); 
-			color: var(--mention-color);
+			background-color: var(--mentionbg-color); 
+			color: var(--mentiontext-color);
 		}
 		
 		.interactive:hover {
@@ -255,7 +266,8 @@
 		#app-mount .messageGroupBlockedBtn-1PBBh- {color: var(--primary1-colour);}
 		.noticeDanger-7u-yT9 .button-1MICoQ:hover {background-color: transparent; color: white;}
 		#app-mount .unreadMentionsBar-1VrBNe {background-color: var(--secondary3-colour);}
-		#app-mount .channelTextArea-rNsIhG .scrollableContainer-2NUZem {background-color: var(--secondary1-colour);}
+		#app-mount .channelTextArea-rNsIhG .scrollableContainer-2NUZem {background-color: var(--secondary1-colour)}
+		.scrollableContainer-2NUZem {margin: 0 .65rem 0 0;}
 
 		#app-mount .newMessagesBar-mujexs {background-color: var(--primary1-colour);} 
 		#app-mount .newMessagesBar-mujexs:hover {background-color: rgba(255,50,50, .5)}
@@ -308,9 +320,30 @@
 	/*Context Menu & Server Menu*/
 	#app-mount .contextMenu-HLZMGh .barFill-23-gu- {background-color: var(--primary1-colour);}
 	#app-mount .menu-Sp6bN1, #app-mount .contextMenu-HLZMGh {background-color: var(--secondary3-colour)}
-	#app-mount .item-1GzJrl:hover , #app-mount .item-1Yvehc:hover {background-color: var(--secondary1-colour)}
+	#app-mount .item-1GzJrl:hover , #app-mount .item-1Yvehc:hover {background-color: var(--context-color)}
 	#app-mount .separator-2zcjq8 {background-color: var(--primary3-colour)}
-
+	.theme-dark .submenu-2-ysNh {background-color: var(--context-color);}
+	.theme-dark .menu-3sdvDG {background: transparent; background-color: var(--context-color);}
+	.theme-dark .colorDefault-2K3EoJ .focused-3afm-j {background-color: var(--context-color);}
+	.button-F9qN4n {
+		border-radius: 50%;
+		background-color: var(--secondary2-colour);
+	}
+	.button-F9qN4n.focused-3ZzkKr,
+	.button-F9qN4n:hover {
+		background-color: var(--secondary2-colour);
+	}
+	.button-F9qN4n.focused-3ZzkKr {
+		-webkit-box-shadow: 0 0 1px 2px var(--secondary2-colour);
+		box-shadow: 0 0 1px 2px var(--secondary2-colour);
+	}
+	.colorDefault-2K3EoJ.focused-3afm-j {
+		background-color: var(--secondary2-colour);
+		color: #fff;
+	}
+	
+	
+	
 	#app-mount .danger-2dXSTE:hover {background-color: var(--primary3-colour)}
 	#app-mount input[type=checkbox]:checked+span {
 		border-color:var(--primary1-colour); 
@@ -492,6 +525,11 @@
 		#app-mount .react-datepicker__header {
 			background-color: transparent;
 		}
+		
+		.theme-dark .streamPreview-2-WUWT {
+			background-color: transparent;
+			background-image: var(--transparency-6);
+		}
 
 	/*User Popup*/
 	#app-mount .bodyInner-245q0L, #app-mount .footer-1fjuF6 {background-color: var(--secondary1-colour)}
@@ -599,6 +637,9 @@
 		/*BBD ContentErrors and Other BBD Modals*/
 		#app-mount .error-link {color: var(--primary1-colour);}
 		#app-mount .bd-modal-inner button {background-color: var(--primary1-colour)}
+		
+		/*Other*/
+
 
 	/*TopBar*/
 	#app-mount .typeWindows-1za-n7 {
@@ -700,6 +741,7 @@
 .chat-3bRxxu .container-1r6BKw {
 	background-image: var(--transparency-10);
 }
+
 
 /* Guild and Top bar transparency */
 .theme-dark .wrapper-1Rf91z {
@@ -814,6 +856,44 @@
 	border-color: var(--guildsError-color);
 	background-color: var(--guildsError-color);
 }
+
+
+.theme-light .app-2rEoOp, 
+.theme-light .layer-3QrUeG, 
+.theme-light .container-3Mxszk,
+.theme-light .scroller-1IIF0A,
+.theme-light .header-39GIC8,
+.theme-light .chat-3bRxxu, 
+.theme-light .messages-3amgkR {
+	background-color: transparent;
+}
+
+.theme-light .libraryHeader-3g95kE .container-1r6BKw .themed-ANHk51,
+.container-1r6BKw .themed-ANHk51 {
+	background: green;
+}
+
+
+
+
+
+
+
+.gradientContainer-10lXLB {}
+
+.theme-dark .powercord-toast {
+	background-color: var(--context-color);
+	border: none;
+}
+
+.theme-dark .powercord-toast .header, 
+.theme-dark .powercord-toast .contents .inner {
+	background-color: transparent;
+	border: none;
+}
+
+
+
 
 
 
